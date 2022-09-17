@@ -14,9 +14,9 @@ app.use(express.json());
 app.use('/', require('./routes/auth'));
 app.use('/', require('./routes/notes'));
 
-app.get('/',(req,res)=>{
-    res.send('hello world');
-})
+// app.get('/',(req,res)=>{
+//     res.send('hello world');
+// })
 
 
 //if environment process NODE_ENV is production then use buid virson of the frontend
