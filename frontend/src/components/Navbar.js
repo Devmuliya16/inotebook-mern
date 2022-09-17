@@ -13,7 +13,7 @@ const Navbar = () => {
 
   
   if(window.location.href==="https://i-notebook-v1.herokuapp.com/" && localStorage.getItem('authTokenNotes')===null){
-    window.location.href='https://i-notebook-v1.herokuapp.com/login' 
+    window.location.href='https://i-notebook-v1.herokuapp.com' 
   }
 
   const delauth = ()=>{
