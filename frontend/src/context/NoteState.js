@@ -18,7 +18,7 @@ const NoteState = (props) =>{
     
     //crude functionality
     //fetching all notes for db
-    const host = 'http://localhost:5000';
+    const host = process.env.PORT || 'http://localhost:5000';
     const fetchUserNotes = async ()=>{
         const response = await fetch(`${host}/api/notes/getnotes`,{
             method:"GET",
