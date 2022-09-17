@@ -18,7 +18,7 @@ const NoteState = (props) =>{
     
     //crude functionality
     //fetching all notes for db
-    const host = process.env.PORT || 'http://localhost:5000';
+    const host = (process.env.NODE_ENV === "production") ? 'https://i-notebook-v1.herokuapp.com' : 'http://localhost:5000';
     const fetchUserNotes = async ()=>{
         const response = await fetch(`${host}/api/notes/getnotes`,{
             method:"GET",
