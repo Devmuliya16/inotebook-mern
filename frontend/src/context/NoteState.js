@@ -142,7 +142,7 @@ const NoteState = (props) =>{
     //LOGIN
     const login = async (e,email,password)=>{
         e.preventDefault();
-        const response = await fetch('http://localhost:5000/api/auth/login',{
+        const response = await fetch(`${host}/api/auth/login`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -164,7 +164,7 @@ const NoteState = (props) =>{
     //SIGNUP
     const signup = async (e,user,email,password) =>{
         e.preventDefault();
-        const response = await fetch('http://localhost:5000/api/auth/signup',{
+        const response = await fetch(`${host}/api/auth/signup`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',

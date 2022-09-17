@@ -12,8 +12,8 @@ const Navbar = () => {
   },[location]);
 
   
-  if(window.location.href==="http://localhost:3000/" && localStorage.getItem('authTokenNotes')===null){
-    window.location.href='http://localhost:3000/login' 
+  if(window.location.href==="https://i-notebook-v1.herokuapp.com/" && localStorage.getItem('authTokenNotes')===null){
+    window.location.href='https://i-notebook-v1.herokuapp.com/login' 
   }
 
   const delauth = ()=>{
