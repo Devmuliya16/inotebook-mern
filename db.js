@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 //for local environmant variable reading
-require('dotenv').config({path:".env"});
+const path = require('path');
+require('dotenv').config({path:`${path.resolve(__dirname,'.env')}`});
 const mongoURL = process.env.MONGO_URL;
 
 
