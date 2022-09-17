@@ -12,9 +12,9 @@ const Navbar = () => {
   },[location]);
 
   
-  // if(window.location.href==="https://i-notebook-v1.herokuapp.com/" && localStorage.getItem('authTokenNotes')===null){
-  //   window.location.href='https://i-notebook-v1.herokuapp.com' 
-  // }
+  if(window.location.href==="https://i-notebook-v1.herokuapp.com" && localStorage.getItem('authTokenNotes')===null){
+    window.location.href='https://i-notebook-v1.herokuapp.com/login' 
+  }
 
   const delauth = ()=>{
     localStorage.removeItem('authTokenNotes');
