@@ -20,8 +20,8 @@ app.use('/', require('./routes/notes'));
 
 
 
-app.get('/*', function (req, res) {res.sendFile('frontend/public/index.html'),
-    (err)=>{res.status(500).send(err)}});
+// app.get('/*', function (req, res) {res.sendFile('frontend\public\index.html'),
+//     (err)=>{res.status(500).send(err)}});
 
 //if environment process NODE_ENV is production then use buid virson of the frontend
 if(process.env.NODE_ENV === "production"){
