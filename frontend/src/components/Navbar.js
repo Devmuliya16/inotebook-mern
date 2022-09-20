@@ -12,9 +12,7 @@ const Navbar = () => {
   },[location]);
 
   
-  if(window.location.href==="https://i-notebook-v1.herokuapp.com" && localStorage.getItem('authTokenNotes')===null){
-    window.location.href='https://i-notebook-v1.herokuapp.com/login' 
-  }
+
 
   const delauth = ()=>{
     localStorage.removeItem('authTokenNotes');
@@ -22,10 +20,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light" style={{minWidth:'300px'}}>
+      <nav className="navbar navbar-expand-lg bg-light shadow-sm bg-white rounded" style={{minWidth:'300px'}}>
         <div className="container-fluid">
           <div className="navbar-brand">
-            iNotebook
+           <b> iNotebook</b>
           </div>
           <button
             className="navbar-toggler"
@@ -43,14 +41,14 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                  className={`nav-link ${(location.pathname === "/") ? "active" : ""}`} to='/'>
-                  Notes
+                  <b>Notes</b>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link 
                 className={`nav-link ${(location.pathname === "/about") ? "active" : ""}`}
                   to="/about">
-                  About
+                  <b>About</b>
                 </Link>
               </li>
             </ul>
@@ -58,7 +56,7 @@ const Navbar = () => {
               {/* if logged in then show logout button only */}
               {localStorage.getItem('authTokenNotes')===null ? 
                 <Link type="button" className="btn btn-primary mx-2" to="/login">Log in</Link>
-                : <Link type="button" className="btn btn-primary mx-2" to="/login" onClick={delauth}>Log out</Link>
+                : <Link type="button" className="btn btn-dark mx-2" to="/login" onClick={delauth}>Log out</Link>
               }
               <Link type="button" className="btn btn-primary mx-2" to="/signup">Sign up</Link>
             </div>

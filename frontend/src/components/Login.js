@@ -15,7 +15,7 @@ const Login = () => {
   }
   return (
     <>
-    <div className=" m-auto w-50" style={{minWidth:'300px'}}>
+    <div className=" m-auto w-50 mt-5" style={{minWidth:'300px'}}>
       <h3>Log-in</h3>
       <form>
         <div className="mb-3">
@@ -51,6 +51,9 @@ const Login = () => {
         <button className="btn btn-primary" onClick={log} >
           Log-in
         </button>
+        <div className="form-text">
+          don't have account ?    
+        </div>
       </form></div>
     </>
   );

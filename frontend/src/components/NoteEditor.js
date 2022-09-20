@@ -21,7 +21,8 @@ const NoteEditor = () => {
       }
   return (
     <>
-    <h3>enter your notes</h3>
+    <div style={{display:'flex',flexWrap:'wrap',flexDirection:'column',justifyContent:'space-between', marginTop:'10px'}}>
+    <h3>Create your notes</h3>
         <div className="input-group flex-nowrap m-1">
           <span className="input-group-text" id="addon-wrapping">
             Title
@@ -50,7 +51,7 @@ const NoteEditor = () => {
             />
           
         </div>
-        <div className="form-floating m-1">
+        <div className="form-floating flex-nowrap m-1">
           <textarea
             className="form-control"
             style={{ height: "150px", resize:"none"}}
@@ -63,6 +64,7 @@ const NoteEditor = () => {
           <label htmlFor="floatingTextarea" >Note</label>
         </div>
         <button type="button" className="btn btn-primary m-1" onClick={uppendNote} disabled={note.discription.length<5}>Save Notes</button> 
+    </div>
     </>
   )
 }

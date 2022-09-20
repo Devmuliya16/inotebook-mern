@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef ,useState} from "react";
 import NoteElement from "./NoteElement";
 import noteContext from "../context/noteContext";
 import NoteEditor from "./NoteEditor";
+import Login from "./Login";
 
 const Home = () => {
   //loading all props from the NoteState
@@ -10,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchUserNotes();
-  }, []);
+  },[]);
 
 
   //******************************************************************************************** */
@@ -40,7 +41,10 @@ const Home = () => {
 
   
   return (
+    (localStorage.getItem('authTokenNotes')===null) ?
     <>
+    <Login/>
+    </>:<>
       <div className="d-flex flex-column justify-content-around mx-auto w-75">
         <NoteEditor />
 

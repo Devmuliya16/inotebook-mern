@@ -9,6 +9,9 @@ import Alert from './components/Alert';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoteState from "./context/NoteState"; //common context imported
 
+
+
+
 function App() {
   return (
     <>

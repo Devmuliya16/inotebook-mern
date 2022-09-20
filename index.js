@@ -19,6 +19,14 @@ app.use('/', require('./routes/notes'));
 // })
 
 
+const path = require('path');
+app.get('/*', function (req, res) {
+    res.sendFile(
+    path.join(__dirname, '\\frontend\\public\\index.html'),
+    (err)=>{res.status(500).send(err);
+    });
+});
+
 //if environment process NODE_ENV is production then use buid virson of the frontend
 if(process.env.NODE_ENV === "production"){
     app.use(express.static('frontend/build'));
@@ -29,5 +37,5 @@ if(process.env.NODE_ENV === "production"){
 //because the variable port will be provided by the server
 const port = process.env.PORT || 5000;
 app.listen(port,()=>{
-    console.log(`running on http://localhost:${port}`); 
+    console.log(`running on ${port}`); 
 });
