@@ -19,10 +19,9 @@ app.use('/', require('./routes/notes'));
 // })
 
 
-const path = require('path');
+
 app.get('/*', function (req, res) {
-    res.sendFile(
-    path.join(__dirname, '\\frontend\\public\\index.html'),
+    res.sendFile('frontend/public/index.html'),
     (err)=>{res.status(500).send(err);
     });
 });
