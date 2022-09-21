@@ -10,6 +10,7 @@ const app = express();
 var cors = require('cors');
 app.use(cors());
 
+
 app.use(express.json());
 app.use('/', require('./routes/auth'));
 app.use('/', require('./routes/notes'));
