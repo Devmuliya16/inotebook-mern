@@ -18,7 +18,7 @@ const NoteState = (props) =>{
     
     //crude functionality
     //fetching all notes for db
-    const host =process.env.VERCEL_URL ||'https://i-notebook-v1.herokuapp.com' ;
+    const host ="";
     const fetchUserNotes = async ()=>{
         const response = await fetch(`${host}/api/notes/getnotes`,{
             method:"GET",
