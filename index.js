@@ -28,7 +28,7 @@ app.use('/', require('./routes/notes'));
 if(process.env.NODE_ENV === "production"){
     app.use(express.static('./frontend/build'));
     app.get('/*',(req,res)=>{
-        res.sendFile('./frontend/build/index.js',(err)=>{if(err){res.send(err)}})
+        res.sendFile('./frontend/build/index.html',(err)=>{if(err){res.send(err)}})
     });
 }
 
