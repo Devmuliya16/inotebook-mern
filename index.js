@@ -29,7 +29,7 @@ app.use('/', require('./routes/notes'));
 // }
 // app.use(express.static('./frontend/build'));
 app.get('/*',(req,res)=>{
-    res.sendFile("./frontend/build/index.html",{ root: __dirname },(err)=>{if(err){res.send(err)}})
+    res.sendFile("./frontend/public/index.html",{ root: __dirname },(err)=>{if(err){res.send(err)}})
 });
 
 
