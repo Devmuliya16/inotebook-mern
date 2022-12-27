@@ -18,7 +18,7 @@ const NoteState = (props) =>{
     
     //crude functionality
     //fetching all notes for db
-    const host ="";
+    const host =window.location.origin;
     const fetchUserNotes = async ()=>{
         const response = await fetch(`${host}/api/notes/getnotes`,{
             method:"GET",
