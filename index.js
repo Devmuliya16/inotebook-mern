@@ -29,8 +29,7 @@ app.use('/', require('./routes/notes'));
 // }
 // app.use(express.static('./frontend/build'));
 app.get('/*',(req,res)=>{
-    const path = require('path');
-    res.sendFile(path.resolve("Backend\\frontend\\build\\index.html"),(err)=>{if(err){res.send(err)}})
+    res.sendFile("./frontend/build/index.html",{ root: __dirname },(err)=>{if(err){res.send(err)}})
 });
 
 
