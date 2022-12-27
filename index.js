@@ -25,12 +25,13 @@ app.use('/', require('./routes/notes'));
 //     (err)=>{res.status(500).send(err)}});
 
 //if environment process NODE_ENV is production then use buid virson of the frontend
-if(process.env.NODE_ENV === "production"){
-    app.use(express.static('./frontend/build'));
-    app.get('/*',(req,res)=>{
-        res.sendFile('./frontend/build/index.html',(err)=>{if(err){res.send(err)}})
-    });
-}
+// if(process.env.NODE_ENV === "production"){
+// }
+// app.use(express.static('./frontend/build'));
+app.get('/*',(req,res)=>{
+    const path = require('path');
+    res.sendFile(path.resolve(__dirname,"frontend","static","index.html"),(err)=>{if(err){res.send(err)}})
+});
 
 
 //server start
